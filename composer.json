@@ -1,0 +1,46 @@
+{
+    "name": "faustbrian/path-of-exile-php-client",
+    "description": "A VirusTotal Client for PHP",
+    "keywords": ["api", "path of exile", "Brian Faust", "faustbrian"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Brian Faust",
+        "email": "hello@brianfaust.de",
+        "homepage": "https://brianfaust.de"
+    }],
+    "repositories": [{
+        "type": "composer",
+        "url": "https://satis.oliotech.solutions"
+    }],
+    "require": {
+        "php": "^7.0",
+        "faustbrian/zttp": "^1.0@dev"
+    },
+    "require-dev": {
+        "coderabbi/phpumoji": "^0.7.0@beta",
+        "graham-campbell/testbench": "^3.3",
+        "mockery/mockery": "^0.9",
+        "phpunit/phpunit": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrianFaust\\PoE\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrianFaust\\Tests\\PoE\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
