@@ -11,21 +11,21 @@
 
 namespace BrianFaust\PoE\API;
 
-use BrianFaust\Zttp\PendingZttpRequest;
+use BrianFaust\Http\PendingHttpRequest;
 
 abstract class AbstractAPI
 {
     /**
-     * @var \BrianFaust\Zttp\PendingZttpRequest
+     * @var \BrianFaust\Http\PendingHttpRequest
      */
     protected $client;
 
     /**
      * Create a new API class instance.
      *
-     * @param \BrianFaust\Zttp\PendingZttpRequest $client
+     * @param \BrianFaust\Http\PendingHttpRequest $client
      */
-    public function __construct(PendingZttpRequest $client)
+    public function __construct(PendingHttpRequest $client)
     {
         $this->client = $client;
     }

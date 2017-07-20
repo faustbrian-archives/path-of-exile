@@ -11,13 +11,20 @@
 
 namespace BrianFaust\PoE;
 
-use BrianFaust\Zttp\Zttp;
+use BrianFaust\Http\Http;
 
 class Client
 {
-    public function api(string $name)
+    /**
+     * Create a new API service instance.
+     *
+     * @param string $name
+     *
+     * @return \BrianFaust\PoE\API\AbstractAPI
+     */
+    public function api(string $name): API\AbstractAPI
     {
-        $client = Zttp::withBaseUri('http://api.pathofexile.com/');
+        $client = Http::withBaseUri('http://api.pathofexile.com/');
 
         $class = "BrianFaust\\PoE\\API\\{$name}";
 

@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Tests\PathOfExile;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
-abstract class AbstractTestCase extends TestCase
+abstract class TestCase extends BaseTestCase
 {
 }

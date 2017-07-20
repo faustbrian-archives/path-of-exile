@@ -11,6 +11,8 @@
 
 namespace BrianFaust\PoE\API;
 
+use BrianFaust\Http\HttpResponse;
+
 class Leagues extends AbstractAPI
 {
     /**
@@ -18,11 +20,11 @@ class Leagues extends AbstractAPI
      *
      * @param array $parameters
      *
-     * @return array
+     * @return \BrianFaust\Http\HttpResponse
      */
-    public function all(array $parameters = []): ?array
+    public function all(array $parameters = []): HttpResponse
     {
-        return $this->client->get('leagues')->json();
+        return $this->client->get('leagues');
     }
 
     /**
@@ -31,10 +33,10 @@ class Leagues extends AbstractAPI
      * @param int   $id
      * @param array $parameters
      *
-     * @return array
+     * @return \BrianFaust\Http\HttpResponse
      */
-    public function get(int $id, array $parameters = []): ?array
+    public function get(int $id, array $parameters = []): HttpResponse
     {
-        return $this->client->get("leagues/$id")->json();
+        return $this->client->get("leagues/{$id}");
     }
 }

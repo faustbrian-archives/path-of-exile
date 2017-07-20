@@ -11,6 +11,8 @@
 
 namespace BrianFaust\PoE\API;
 
+use BrianFaust\Http\HttpResponse;
+
 class StashTabs extends AbstractAPI
 {
     /**
@@ -18,10 +20,10 @@ class StashTabs extends AbstractAPI
      *
      * @param int $id
      *
-     * @return array
+     * @return \BrianFaust\Http\HttpResponse
      */
-    public function get(?int $id = null): ?array
+    public function get(?int $id = null): HttpResponse
     {
-        return $this->client->get('public-stash-tabs', compact('id'))->json();
+        return $this->client->get('public-stash-tabs', compact('id'));
     }
 }

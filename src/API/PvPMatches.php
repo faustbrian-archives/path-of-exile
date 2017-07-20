@@ -11,6 +11,8 @@
 
 namespace BrianFaust\PoE\API;
 
+use BrianFaust\Http\HttpResponse;
+
 class PvPMatches extends AbstractAPI
 {
     /**
@@ -18,10 +20,10 @@ class PvPMatches extends AbstractAPI
      *
      * @param array $parameters
      *
-     * @return array
+     * @return \BrianFaust\Http\HttpResponse
      */
-    public function all(array $parameters = []): ?array
+    public function all(array $parameters = []): HttpResponse
     {
-        return $this->client->get('pvp-matches', $parameters)->json();
+        return $this->client->get('pvp-matches', $parameters);
     }
 }

@@ -11,6 +11,8 @@
 
 namespace BrianFaust\PoE\API;
 
+use BrianFaust\Http\HttpResponse;
+
 class Ladders extends AbstractAPI
 {
     /**
@@ -20,10 +22,10 @@ class Ladders extends AbstractAPI
      * @param int   $id
      * @param array $parameters
      *
-     * @return array
+     * @return \BrianFaust\Http\HttpResponse
      */
-    public function get(int $id, array $parameters = []): ?array
+    public function get(int $id, array $parameters = []): HttpResponse
     {
-        return $this->client->get("ladders/$id", $parameters)->json();
+        return $this->client->get("ladders/{$id}", $parameters);
     }
 }

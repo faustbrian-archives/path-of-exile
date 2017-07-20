@@ -8,13 +8,9 @@
         "email": "hello@brianfaust.de",
         "homepage": "https://brianfaust.de"
     }],
-    "repositories": [{
-        "type": "composer",
-        "url": "https://satis.oliotech.solutions"
-    }],
     "require": {
         "php": "^7.0",
-        "faustbrian/zttp": "^1.0@dev"
+        "faustbrian/http": "^1.0@dev"
     },
     "require-dev": {
         "coderabbi/phpumoji": "^0.7.0@beta",

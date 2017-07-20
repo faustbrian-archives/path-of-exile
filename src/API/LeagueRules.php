@@ -11,16 +11,18 @@
 
 namespace BrianFaust\PoE\API;
 
+use BrianFaust\Http\HttpResponse;
+
 class LeagueRules extends AbstractAPI
 {
     /**
      * Get a list of all possible league rules.
      *
-     * @return array
+     * @return \BrianFaust\Http\HttpResponse
      */
-    public function all(): ?array
+    public function all(): HttpResponse
     {
-        return $this->client->get('league-rules')->json();
+        return $this->client->get('league-rules');
     }
 
     /**
@@ -28,10 +30,10 @@ class LeagueRules extends AbstractAPI
      *
      * @param int $id
      *
-     * @return array
+     * @return \BrianFaust\Http\HttpResponse
      */
-    public function get(int $id): ?array
+    public function get(int $id): HttpResponse
     {
-        return $this->client->get("league-rules/{$id}", $parameters)->json();
+        return $this->client->get("league-rules/{$id}", $parameters);
     }
 }
